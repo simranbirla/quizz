@@ -73,18 +73,25 @@ const Quiz2 = (props) => {
     );
   };
 
+  const renderQ = () => {
+    return props.questions[num] ? (
+      <div>{props.questions[num].ques}</div>
+    ) : (
+      console.log(false)
+    );
+  };
+
   return (
     <div>
-      {props.questions[2]
-        ? console.log(props.questions[2].id)
-        : console.log(false)}
-      THIS IS 2ND QUIZ{time > 0 ? renderQues(num) : renderScreen()}
+      THIS IS 2ND QUIZ
+      <div>{renderQ()}</div>
+      {time > 0 ? renderQues(num) : renderScreen()}
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  //console.log(state);
   return { questions: state };
 };
 
