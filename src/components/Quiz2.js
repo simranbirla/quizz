@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import questions from "./sampleQues";
-const Quiz2 = () => {
+import { connect } from "react-redux";
+import { fetchQues } from "../actions";
+
+const Quiz2 = (props) => {
   const [num, setNum] = useState(0);
   const [ans, setAns] = useState("");
   const [score, setScore] = useState(0);
@@ -9,10 +12,11 @@ const Quiz2 = () => {
     const interval = setInterval(() => {
       setTime(time - 1);
     }, 1000);
+    props.fetchQues();
     return () => {
       clearInterval(interval);
     };
-  }, [time]);
+  }, []);
 
   const renderQues = (num) => {
     return (
@@ -70,8 +74,18 @@ const Quiz2 = () => {
   };
 
   return (
-    <div>THIS IS 2ND QUIZ{time > 0 ? renderQues(num) : renderScreen()}</div>
+    <div>
+      {props.questions[2]
+        ? console.log(props.questions[2].id)
+        : console.log(false)}
+      THIS IS 2ND QUIZ{time > 0 ? renderQues(num) : renderScreen()}
+    </div>
   );
 };
 
-export default Quiz2;
+const mapStateToProps = (state) => {
+  console.log(state);
+  return { questions: state };
+};
+
+export default connect(mapStateToProps, { fetchQues })(Quiz2);
