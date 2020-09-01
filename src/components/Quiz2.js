@@ -14,10 +14,6 @@ const Quiz2 = () => {
     };
   }, [time]);
 
-  const finishQuiz = () => {
-    return <h1>{score}</h1>;
-  };
-
   const renderQues = (num) => {
     return (
       <div>
