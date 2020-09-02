@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import questions from "./sampleQues";
+import { connect } from "react-redux";
+import question from "../apis/question";
 
 const renderQues = () => {
   return questions.map((ques, index) => {
@@ -36,8 +38,19 @@ const renderQues = () => {
 //console.log(e.target.innerText);
 //};
 
-const Quiz1 = () => {
+const Quiz1 = (props) => {
+  useEffect(() => {
+    const data = question.get("/questions/1");
+    console.log(data);
+    return;
+  }, []);
+
   return <div>{renderQues()}</div>;
 };
 
-export default Quiz1;
+const mapStateToProps = (state) => {
+  //console.log(state);
+  return state;
+};
+
+export default connect(mapStateToProps)(Quiz1);
