@@ -16,6 +16,10 @@ export const fetchQue = () => {
   };
 };
 
-export const createQues = () => {
-  return { type: "CREATE" };
+export const createQues = (value) => {
+  return async (dispatch) => {
+    const response = await questions.post("/questions", { ...value });
+    console.log(response);
+    dispatch({ type: "CREATE", payload: response.data });
+  };
 };
