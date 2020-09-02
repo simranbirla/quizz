@@ -1,28 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { createQues } from "../actions/index";
 const CreateQues = (props) => {
   const [question, setQuestion] = useState({});
   const [option, setOptions] = useState({});
+
   const onInput = (e, type) => {
-    //console.log(e.target.value);
     if (type.includes("option")) {
       setOptions({ ...option, [type]: e.target.value });
-      setQuestion({ ...question, option: Object.values(option) });
     } else {
       setQuestion({ ...question, [type]: e.target.value });
     }
   };
 
-  const formSubmit = (e, value) => {
+  const formSubmit = (e, value, opt) => {
     e.preventDefault();
-    props.createQues(value);
+    props.createQues(value, opt);
   };
+
+  useEffect(() => {
+    console.log(question);
+    return;
+  }, [question]);
 
   return (
     <div>
-      {console.log(question)}
-      <form onSubmit={(e) => formSubmit(e, question)}>
+      <form onSubmit={(e) => formSubmit(e, question, Object.values(option))}>
         <input
           type="text"
           placeholder="question"
