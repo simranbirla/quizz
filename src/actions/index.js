@@ -8,12 +8,8 @@ export const fetchQues = (sub) => {
   };
 };
 
-export const fetchQue = () => {
-  return async (dispatch) => {
-    const response = await questions.get("/questions/1");
-    console.log(response.data);
-    dispatch({ type: "FETCH", payload: response.data });
-  };
+export const clear = () => {
+  return { type: "CLEAR" };
 };
 
 export const createQues = (sub, ques, option) => {

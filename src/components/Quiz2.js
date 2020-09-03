@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchQues } from "../actions";
+import { fetchQues, clear } from "../actions";
 import useTime from "./useTime";
 
 const Quiz2 = (props) => {
   const [num, setNum] = useState(1);
   const [ans, setAns] = useState("");
   const [score, setScore] = useState(0);
-  console.log(props);
+  //console.log(props);
   const time = useTime();
   useEffect(() => {
+    props.clear();
     props.fetchQues(props.match.params.sub);
     return;
   }, []);
@@ -67,8 +68,8 @@ const Quiz2 = (props) => {
     }, 1000);
   };
 
-  const answered = (num) => {
-    return num > 3 ? (
+  const answered = (num, length) => {
+    return num > length ? (
       <div>
         <h1>{score}</h1>
       </div>
@@ -80,14 +81,15 @@ const Quiz2 = (props) => {
   return (
     <div>
       <h1>THIS IS 2ND QUIZ</h1>
-      {time > 0 ? answered(num) : renderScreen()}
+      {console.log(Object.values(props.questions).length)}
+      {time > 0 ? answered(num, props.questions.length) : renderScreen()}
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return { questions: state };
 };
 
-export default connect(mapStateToProps, { fetchQues })(Quiz2);
+export default connect(mapStateToProps, { fetchQues, clear })(Quiz2);

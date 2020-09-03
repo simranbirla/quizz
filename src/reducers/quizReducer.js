@@ -1,4 +1,3 @@
-import React from "react";
 import _ from "lodash";
 const quizReducer = (state = {}, action) => {
   switch (action.type) {
@@ -6,6 +5,10 @@ const quizReducer = (state = {}, action) => {
       return { ...state, ..._.mapKeys(action.payload, "id") };
     case "CREATE":
       return { ...state, [action.payload.id]: action.payload };
+    case "CLEAR":
+      return {
+        ..._.omit(state, Object.keys(state)),
+      };
     default:
       return state;
   }
