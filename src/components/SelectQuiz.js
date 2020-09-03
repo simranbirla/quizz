@@ -3,11 +3,20 @@ import { Link } from "react-router-dom";
 const SelectQuiz = () => {
   return (
     <div>
-      <Link to="/quiz1">
-        <button>Quiz 1</button>
+      <Link to="/gk">
+        <button>General Knowledge</button>
       </Link>
-      <Link to="/quiz2">
-        <button>Quiz 2</button>
+      <Link to="/cn">
+        <button>Computer Networks</button>
+      </Link>
+      <Link to="/sql">
+        <button>SQL</button>
+      </Link>
+      <Link to="/js">
+        <button>Javascript</button>
+      </Link>
+      <Link to="/os">
+        <button>Operating System</button>
       </Link>
     </div>
   );

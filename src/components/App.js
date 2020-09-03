@@ -12,7 +12,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={SelectQuiz} />
           <Route path="/quiz1" exact component={Quiz1} />
-          <Route path="/quiz2" component={Quiz2} />
+          <Route path="/:sub" component={Quiz2} />
           <Route path="/create" component={CreateQues} />
         </Switch>
       </Router>

@@ -10,7 +10,7 @@ const Quiz2 = (props) => {
   console.log(props);
   const time = useTime();
   useEffect(() => {
-    props.fetchQues("questions");
+    props.fetchQues(props.match.params.sub);
     return;
   }, []);
 
