@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import questions from "./sampleQues";
 import { connect } from "react-redux";
 import { fetchQues } from "../actions";
 import useTime from "./useTime";
@@ -8,10 +7,10 @@ const Quiz2 = (props) => {
   const [num, setNum] = useState(1);
   const [ans, setAns] = useState("");
   const [score, setScore] = useState(0);
-  //const [time, setTime] = useState(59);
+  console.log(props);
   const time = useTime();
   useEffect(() => {
-    props.fetchQues();
+    props.fetchQues("questions");
     return;
   }, []);
 
@@ -31,7 +30,7 @@ const Quiz2 = (props) => {
         <h2>{score}</h2>
         <p>{props.questions[num].ques}</p>
         <div>
-          {props.questions[num].options.map((opt) => {
+          {props.questions[num].option.map((opt) => {
             return (
               <p
                 onClick={() => check(opt, props.questions[num].answer)}
@@ -87,7 +86,7 @@ const Quiz2 = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  //console.log(state);
+  console.log(state);
   return { questions: state };
 };
 
