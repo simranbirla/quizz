@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { createQues } from "../actions/index";
 const CreateQues = (props) => {
@@ -15,13 +15,8 @@ const CreateQues = (props) => {
 
   const formSubmit = (e, value, opt) => {
     e.preventDefault();
-    props.createQues(value, opt);
+    props.createQues("questions", value, opt);
   };
-
-  useEffect(() => {
-    console.log(question);
-    return;
-  }, [question]);
 
   return (
     <div>

@@ -16,9 +16,9 @@ export const fetchQue = () => {
   };
 };
 
-export const createQues = (ques, options) => {
+export const createQues = (sub, ques, options) => {
   return async (dispatch) => {
-    const response = await questions.post("/questions", { ...ques, options });
+    const response = await questions.post(`/${sub}`, { ...ques, options });
     dispatch({ type: "CREATE", payload: response.data });
     history.push("/");
   };
