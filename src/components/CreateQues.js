@@ -4,6 +4,7 @@ import { createQues } from "../actions/index";
 const CreateQues = (props) => {
   const [question, setQuestion] = useState({});
   const [option, setOptions] = useState({});
+  const [sub, setSub] = useState("gk");
 
   const onInput = (e, type) => {
     if (type.includes("option")) {
@@ -15,11 +16,22 @@ const CreateQues = (props) => {
 
   const formSubmit = (e, value, opt) => {
     e.preventDefault();
-    props.createQues("questions", value, opt);
+    props.createQues(sub, value, opt);
+  };
+
+  const dropChange = (e) => {
+    setSub(e.target.value);
   };
 
   return (
     <div>
+      <select onChange={dropChange}>
+        <option value="gk">Genral Knowledge</option>
+        <option value="cn">Computer Networks</option>
+        <option value="os">Operating System</option>
+        <option value="sql">SQL</option>
+        <option value="js">Javascript</option>
+      </select>
       <form onSubmit={(e) => formSubmit(e, question, Object.values(option))}>
         <input
           type="text"
