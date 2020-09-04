@@ -8,7 +8,9 @@ const renderQuestions = (
   setScore,
   setAns,
   setNum,
-  ans
+  ans,
+  setWrong,
+  wrong
 ) => {
   return questions[num] ? (
     <div>
@@ -28,7 +30,9 @@ const renderQuestions = (
                   setNum,
                   num,
                   setScore,
-                  score
+                  score,
+                  setWrong,
+                  wrong
                 )
               }
               style={{
@@ -52,11 +56,23 @@ const renderQuestions = (
   );
 };
 
-const check = (opt, answer, setAns, setNum, num, setScore, score) => {
+const check = (
+  opt,
+  answer,
+  setAns,
+  setNum,
+  num,
+  setScore,
+  score,
+  setWrong,
+  wrong
+) => {
   setAns(opt);
   if (opt === answer) {
     //console.log("right");
     setScore(score + 1);
+  } else {
+    setWrong(wrong + 1);
   }
   setTimeout(() => {
     setAns("");

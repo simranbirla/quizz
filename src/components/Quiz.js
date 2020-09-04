@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchQues, clear } from "../actions";
+import Graph from "./Graph";
 import useTime from "./useTime";
 import renderQ from "./renderQuestions";
 
-const renderScreen = (score) => {
+const renderScreen = (score, length) => {
   return (
     <div>
       <h1>Total Score</h1>
       <h2>{score}</h2>
+      <Graph wrong={length} right={score} />
     </div>
   );
 };
@@ -17,6 +19,7 @@ const Quiz = (props) => {
   const [num, setNum] = useState(1);
   const [ans, setAns] = useState("");
   const [score, setScore] = useState(0);
+  const [wrong, setWrong] = useState(0);
   //console.log(props);
   const time = useTime();
   useEffect(() => {
@@ -35,18 +38,28 @@ const Quiz = (props) => {
     setScore,
     setAns,
     setNum,
-    ans
+    ans,
+    setWrong,
+    wrong
   ) => {
     return num > length
-      ? renderScreen(score)
-      : renderQ(questions, num, time, score, setScore, setAns, setNum, ans);
+      ? renderScreen(score, wrong)
+      : renderQ(
+          questions,
+          num,
+          time,
+          score,
+          setScore,
+          setAns,
+          setNum,
+          ans,
+          setWrong,
+          wrong
+        );
   };
 
   return (
     <div>
-      {
-        //console.log(Object.values(props.questions).length)
-      }
       <h1>IT BEGINS</h1>
       {time > 0
         ? answered(
@@ -58,9 +71,11 @@ const Quiz = (props) => {
             setScore,
             setAns,
             setNum,
-            ans
+            ans,
+            setWrong,
+            wrong
           )
-        : renderScreen(score)}
+        : renderScreen(score, wrong)}
     </div>
   );
 };
