@@ -19,8 +19,8 @@ const Graph = (props) => {
   };
 
   return (
-    <div>
-      <h1>Results</h1>
+    <div className="graph">
+      <h2>Results</h2>
       <Doughnut data={data} />
     </div>
   );

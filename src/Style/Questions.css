@@ -29,3 +29,13 @@
   text-align: center;
   min-width: 300px;
 }
+
+.results {
+  margin-top: 50px;
+}
+
+.results h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: center;
+}

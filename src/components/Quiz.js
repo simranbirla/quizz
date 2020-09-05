@@ -74,7 +74,7 @@ const Quiz = (props) => {
 
 const renderScreen = (score, length, total) => {
   return (
-    <div>
+    <div className="results">
       <h2>Total Score</h2>
       <h2>
         {score}/{total}
