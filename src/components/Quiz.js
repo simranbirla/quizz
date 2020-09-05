@@ -5,16 +5,6 @@ import Graph from "./Graph";
 import useTime from "./useTime";
 import renderQ from "./renderQuestions";
 
-const renderScreen = (score, length) => {
-  return (
-    <div>
-      <h1>Total Score</h1>
-      <h2>{score}</h2>
-      <Graph wrong={length} right={score} />
-    </div>
-  );
-};
-
 const Quiz = (props) => {
   const [num, setNum] = useState(1);
   const [ans, setAns] = useState("");
@@ -76,6 +66,16 @@ const Quiz = (props) => {
             wrong
           )
         : renderScreen(score, wrong)}
+    </div>
+  );
+};
+
+const renderScreen = (score, length) => {
+  return (
+    <div>
+      <h1>Total Score</h1>
+      <h2>{score}</h2>
+      <Graph wrong={length} right={score} />
     </div>
   );
 };
