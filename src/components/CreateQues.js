@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { createQues } from "../actions/index";
+import "../Style/Create.css";
+
 const CreateQues = (props) => {
   const [question, setQuestion] = useState({});
   const [option, setOptions] = useState({});
@@ -24,7 +26,7 @@ const CreateQues = (props) => {
   };
 
   return (
-    <div>
+    <div className="create-container">
       <select onChange={dropChange}>
         <option value="gk">Genral Knowledge</option>
         <option value="cn">Computer Networks</option>
@@ -33,37 +35,46 @@ const CreateQues = (props) => {
         <option value="js">Javascript</option>
       </select>
       <form onSubmit={(e) => formSubmit(e, question, Object.values(option))}>
+        <p>Enter the Question:</p>
         <input
           type="text"
           placeholder="question"
           onChange={(e) => onInput(e, "ques")}
+          className="input"
         />
+        <p>Enter the Answer:</p>
         <input
           type="text"
           placeholder="answer"
           onChange={(e) => onInput(e, "answer")}
+          className="input"
         />
+        <p>Enter the options:</p>
         <input
           type="text"
           placeholder="options"
           onChange={(e) => onInput(e, "option1")}
+          className="input"
         />
         <input
           type="text"
           placeholder="options"
           onChange={(e) => onInput(e, "option2")}
+          className="input"
         />
         <input
           type="text"
           placeholder="options"
           onChange={(e) => onInput(e, "option3")}
+          className="input"
         />
         <input
           type="text"
           placeholder="options"
           onChange={(e) => onInput(e, "option4")}
+          className="input"
         />
-        <button>Submit</button>
+        <button className="submit">Submit</button>
       </form>
     </div>
   );

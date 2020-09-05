@@ -6,7 +6,7 @@ import CreateQues from "./CreateQues";
 import history from "../history";
 const App = () => {
   return (
-    <div>
+    <div className="route" style={{ width: "100%" }}>
       <Router history={history}>
         <Switch>
           <Route path="/" exact component={SelectQuiz} />
