@@ -11,9 +11,11 @@ const Quiz = (props) => {
   const [score, setScore] = useState(0);
   const [wrong, setWrong] = useState(0);
   //console.log(props);
+  console.log(wrong);
   const time = useTime();
   useEffect(() => {
     props.fetchQues(props.match.params.sub);
+    setWrong(Object.values(props.questions).length);
     return () => {
       props.clear();
     };
@@ -33,7 +35,7 @@ const Quiz = (props) => {
     wrong
   ) => {
     return num > length
-      ? renderScreen(score, wrong)
+      ? renderScreen(score, wrong, length)
       : renderQ(
           questions,
           num,
@@ -65,17 +67,19 @@ const Quiz = (props) => {
             setWrong,
             wrong
           )
-        : renderScreen(score, wrong)}
+        : renderScreen(score, wrong, Object.values(props.questions).length)}
     </div>
   );
 };
 
-const renderScreen = (score, length) => {
+const renderScreen = (score, length, total) => {
   return (
     <div>
       <h1>Total Score</h1>
-      <h2>{score}</h2>
-      <Graph wrong={length} right={score} />
+      <h2>
+        {score}/{total}
+      </h2>
+      <Graph wrong={length} right={score} total={total} />
     </div>
   );
 };
