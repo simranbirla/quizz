@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .subject {
+  width: 90%;
   padding: 10px 90px;
-  width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -15,7 +17,7 @@
   font-size: 1.5em;
   font-weight: bold;
   color: white;
-  margin: 10px;
+  margin: 10px auto;
   cursor: pointer;
   box-shadow: 3px 3px 5px darkslateblue;
 }
@@ -26,6 +28,8 @@ h1 {
   text-align: center;
   letter-spacing: 2px;
   font-weight: 900;
+  padding: 5px 30px;
+  border: 6px inset rgb(108, 108, 184);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-image: linear-gradient(

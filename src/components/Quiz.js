@@ -4,6 +4,7 @@ import { fetchQues, clear } from "../actions";
 import Graph from "./Graph";
 import useTime from "./useTime";
 import renderQ from "./renderQuestions";
+import "../Style/Questions.css";
 
 const Quiz = (props) => {
   const [num, setNum] = useState(1);
@@ -52,7 +53,6 @@ const Quiz = (props) => {
 
   return (
     <div>
-      <h1>IT BEGINS</h1>
       {time > 0
         ? answered(
             num,
@@ -75,7 +75,7 @@ const Quiz = (props) => {
 const renderScreen = (score, length, total) => {
   return (
     <div>
-      <h1>Total Score</h1>
+      <h2>Total Score</h2>
       <h2>
         {score}/{total}
       </h2>

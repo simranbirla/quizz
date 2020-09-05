@@ -1,0 +1,31 @@
+.score {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  font-size: 1.3em;
+}
+
+.ques {
+  border: 2px outset rgb(170, 110, 226);
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px 30px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-size: 1.5em;
+  margin: 10px 20px;
+}
+
+.option {
+  display: block;
+  padding: 20px;
+  border: 2px solid rgb(47, 144, 255);
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 300px;
+}

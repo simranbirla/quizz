@@ -1,4 +1,5 @@
 import React from "react";
+import "../Style/Questions.css";
 
 const renderQuestions = (
   questions,
@@ -13,11 +14,18 @@ const renderQuestions = (
   wrong
 ) => {
   return questions[num] ? (
-    <div>
-      <h2>{time}</h2>
-      <h2>{score}</h2>
-      <p>{questions[num].ques}</p>
-      <div>
+    <div className="question-container">
+      <div className="score">
+        <h2>{time}</h2>
+        <h2>{score}</h2>
+      </div>
+      <div className="ques">
+        <p>
+          <span>Q{num}. </span>
+          {questions[num].ques}
+        </p>
+      </div>
+      <div className="options">
         {questions[num].option.map((opt, index) => {
           return (
             <p
@@ -36,16 +44,17 @@ const renderQuestions = (
                 )
               }
               style={{
-                color: `${
+                backgroundColor: `${
                   ans !== opt
-                    ? "black"
+                    ? "transparent"
                     : ans === questions[num].answer
-                    ? "green"
-                    : "red"
+                    ? "yellowgreen"
+                    : "darkred"
                 }`,
               }}
+              className="option"
             >
-              {opt}
+              {index + 1}. {opt}
             </p>
           );
         })}
