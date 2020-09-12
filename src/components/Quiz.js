@@ -12,7 +12,7 @@ const Quiz = (props) => {
   const [score, setScore] = useState(0);
   const [wrong, setWrong] = useState(0);
   //console.log(props);
-  console.log(wrong);
+  //console.log(wrong);
   const time = useTime();
   useEffect(() => {
     props.fetchQues(props.match.params.sub);
