@@ -11,19 +11,33 @@ const SelectQuiz = () => {
       <h1>Select the Subject</h1>
       <div className="sub-buttons">
         <Link to="/gk">
-          <button className="subject">General Knowledge</button>
+          <div className="gk">
+            <button className="subject">General Knowledge</button>
+          </div>
         </Link>
+
         <Link to="/cn">
-          <button className="subject">Computer Networks</button>
+          <div className="cn">
+            <button className="subject">Computer Networks</button>
+          </div>
         </Link>
+
         <Link to="/sql">
-          <button className="subject">SQL</button>
+          <div className="sql">
+            <button className="subject">SQL</button>
+          </div>
         </Link>
+
         <Link to="/js">
-          <button className="subject">Javascript</button>
+          <div className="js">
+            <button className="subject">Javascript</button>
+          </div>
         </Link>
+
         <Link to="/os">
-          <button className="subject">Operating System</button>
+          <div className="os">
+            <button className="subject">Operating System</button>
+          </div>
         </Link>
       </div>
     </div>

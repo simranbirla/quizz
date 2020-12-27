@@ -53,7 +53,7 @@ const Quiz = (props) => {
 
   return (
     <div>
-      {time > 0
+      {time >= 0
         ? answered(
             num,
             Object.values(props.questions).length,

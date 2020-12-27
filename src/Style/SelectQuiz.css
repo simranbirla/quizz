@@ -1,60 +1,64 @@
+.outer h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .sub-buttons {
   display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.subject {
+  flex-wrap: wrap;
   width: 90%;
-  padding: 10px 90px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background: #0f3460;
-  border: 5px solid #16213e;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: white;
-  margin: 10px auto;
-  cursor: pointer;
-  box-shadow: 3px 3px 5px darkslateblue;
+  margin: auto;
+  gap: 30px 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  margin: 80px 0px 50px 0;
-  text-align: center;
-  letter-spacing: 2px;
-  font-weight: 900;
-  padding: 5px 30px;
-  border: 6px inset rgb(108, 108, 184);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(
-    90deg,
-    #020024 0%,
-    #090979 35%,
-    #00d4ff 100%
-  );
+.sub-buttons div {
+  height: 300px;
+  width: 250px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
-.add {
-  width: 300px;
-  background: #e94560;
-  text-align: center;
-  font-size: 1.5em;
-  padding: 10px 20px;
-  margin: 20px 0;
+.sub-buttons .gk {
+  background-image: url("https://image.freepik.com/free-vector/creative-writing-illustration-novel-reading-literature-school-subject-storytelling-study-metaphor-university-class-books-stack-inkwell-cartoon-objects_151150-2505.jpg");
+
+  background-size: 450px;
+  background-repeat: no-repeat;
+}
+
+.sub-buttons .os {
+  background-image: url("https://s3-alpha-sig.figma.com/img/67cb/fd95/b40733d60e24bcf3f6a015dae4f9dd8b?Expires=1609718400&Signature=DSVrSYD7qw9CPDPGpbuGSVwBU8RwEX0sSWsWXbv4taX126CCR1RUoCYMM7GQ5cLgFjWAlGgK73OsjSNxiQWiVcUFsUu03FojoxlbW9hmUxD8MmyzfWmVzvl5pdHbPWzqcGzhA1oDYO5MsprkUD4LotS3wPP1TyeCpbFjYih4mHqoxVkGK6BrDRi-nboUdFRuhluwFJ1CvMwwGymJFeP6DWZ97nhFobJeVoLCsj6RecObteIRUEeqqtnAU46Vqzrls367FRrhwoKVJpiW9rJQd0-6U7dT5Vgt8DeM1eYihhrwCiLUQUd0aWq1RiCY-jqXp99DMgW92zLyFAJmqFjMPg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: 280px;
+}
+
+.sub-buttons .sql {
+  background-image: url("https://s3-alpha-sig.figma.com/img/2680/ab51/7f4eaea9a318487012d7e72a71b09ca2?Expires=1609718400&Signature=ATUl8W84OMWiZ6tk-7celB6SQemr9yYJqKDE5K85DVVHu9CL1bgTLlFh7Ivb-yFOMqM1ImKI7Ej0ZQD6bEnRClLszgi8hprOp9GhtqvP1OWDzhvaK9Mv0cuZCygtxijPuhJyC9H25l1MJxUXCvslcnlvNN4qEYUnqm6wfG3UJtUVU~u8TcLHRKXtNJPydovVdHaLw5Js~j530Vk7yRF-Mf~Ge0MMOB~f4K0nE8T46VP~~d8ksdx0CCpF8CAhLTJfsQ0KsNmnV1LRRI~Phw3BxljikIbS7xCkzG2sIuzVwBUiakrCJ42EuR0653aCAHITfgLEwlT94RPdqLBMxZYDIQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: 450px;
+}
+
+.sub-buttons .js {
+  background-image: url("https://s3-alpha-sig.figma.com/img/b114/3289/a548a6c4131b31f0c3e72f5da6fb67a1?Expires=1609718400&Signature=FF6KwdehPUJIYimcqeS8yJxEdAixIffeQLzmzKS4p~Dw0FOTspfvRYqF5dvpeMhdyVqsOMUqKKsE~n-mHqGBVySQsBRITxeAcpa~es0m7TgCx6wquQrYfa-hK4ta8A4gDibRVpfRssY-fla68JN4d243F0SF74bbWo-E16gSComkG4MSNmQS2bDX6sdnYE8gjFJNPJWP2uYzTt6GP-~hzFKUvjlvINMczKBp77TTVshZ~alf1BEZY0C3R07DpwZINtpukRDJO96reAGnAbEkq5OigGpp1t1GiBzIYoSnyTjBmSlxHjG1APYLBTvjDDZWbUpvz0qJdw9VPcBjG54FQA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: 320px;
+}
+
+.sub-buttons .cn {
+  background-image: url("https://s3-alpha-sig.figma.com/img/ee30/fe9e/9c50fe603c658510a1db71733e99ba6b?Expires=1609718400&Signature=DomuiWo-GBwIskmLo-s6TXQ3qhVdo3smguDbtixzvi-m7iwoH1EEOquJhpzSKNPtCZkLefZehvtFDejVA88FbQDjIsJie9siIWQCD6o1NMWIVtBAenOAcMFIUtEv~WMSgaUPP9zwxH3Hk12dG~YMfjKfQItVbVumO7cyb99aqJux7VT7fpg3GQnhgM-9B5RgMboqkoKe0A6U7dixXoQxVAKmZ2cb6~-cxOfFRsCPvI1lqqKVhYqdwzQfEKT-vPa2521yCp1lkMGQFPs1pjKQkaHw3AGneCacgHiKJT3qFvs2bjZm2AYXAmErbGKzBZYPCFYl37A~fhQBaOyUt8vrXQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+
+  background-size: 320px;
+}
+
+.sub-buttons button {
   position: absolute;
-  top: 0;
-  right: 10px;
-  cursor: pointer;
-  border: 3px outset red;
-}
-
-.add a {
-  text-decoration: none;
+  top: 270px;
+  width: 100%;
+  font-size: 18px;
+  background-color: #2884a2;
   color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
 }
