@@ -2,8 +2,8 @@ import questions from "../apis/question";
 import history from "../history";
 export const fetchQues = (sub) => {
   return async (dispatch) => {
+    dispatch({ type: "LOADING" });
     const response = await questions.get(`/${sub}`);
-    //console.log(response);
     dispatch({ type: "FETCH", payload: response.data });
   };
 };
