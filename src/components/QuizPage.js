@@ -56,7 +56,6 @@ const QuizPage = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return state;
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Question = ({ num, setNum, wrong, setWrong, ans, setAns, questions }) => {
   const check = (e, opt) => {
