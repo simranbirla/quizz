@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchQues, clear } from "../actions";
 import useTime from "./useTime";
+import Question from "./Question";
 
 const QuizPage = (props) => {
   const [ans, setAns] = useState("");
@@ -18,8 +19,21 @@ const QuizPage = (props) => {
 
   return (
     <div>
-      <h3>{time}</h3>
-      <h4>{props.total}</h4>
+      {props.loading ? (
+        <div> LOADING </div>
+      ) : (
+        <>
+          {time >= 0 ? (
+            <>
+              <h3>{time}</h3>
+              <h4>{props.total}</h4>
+              <Question questions={props.questions} />
+            </>
+          ) : (
+            <div>DONE</div>
+          )}
+        </>
+      )}
     </div>
   );
 };
