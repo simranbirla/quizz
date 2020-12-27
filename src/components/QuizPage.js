@@ -3,11 +3,12 @@ import { connect } from "react-redux";
 import { fetchQues, clear } from "../actions";
 import useTime from "./useTime";
 import Question from "./Question";
+import Results from "./FinalResults";
 
 const QuizPage = (props) => {
-  const [ans, setAns] = useState("");
-  const [score, setScore] = useState(0);
-  const [total, setTotal] = useState(0);
+  const [ans, setAns] = useState(0);
+  const [wrong, setWrong] = useState(0);
+  const [num, setNum] = useState(0);
   const time = useTime(60);
 
   useEffect(() => {
@@ -23,14 +24,30 @@ const QuizPage = (props) => {
         <div> LOADING </div>
       ) : (
         <>
-          {time >= 0 ? (
+          {props.questions && time >= 0 && num !== props.total ? (
             <>
               <h3>{time}</h3>
               <h4>{props.total}</h4>
-              <Question questions={props.questions} />
+              <Question
+                questions={props.questions}
+                ans={ans}
+                setAns={setAns}
+                wrong={wrong}
+                setWrong={setWrong}
+                num={num}
+                setNum={setNum}
+              />
             </>
           ) : (
-            <div>DONE</div>
+            <>
+              {props.questions ? (
+                <Results
+                  total={props.questions.length}
+                  ans={ans}
+                  wrong={wrong}
+                />
+              ) : null}
+            </>
           )}
         </>
       )}
