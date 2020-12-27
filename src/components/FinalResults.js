@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Graph from "./Graph";
 
 const FinalResults = (props) => {
+  useEffect(() => {
+    localStorage.setItem(props.user, props.ans);
+    return;
+  }, []);
   return (
     <div>
       You scored

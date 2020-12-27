@@ -44,6 +44,7 @@ const QuizPage = (props) => {
                 <Results
                   total={props.questions.length}
                   ans={ans}
+                  user={props.user}
                   wrong={wrong}
                 />
               ) : null}
