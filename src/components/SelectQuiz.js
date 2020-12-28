@@ -2,12 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Style/SelectQuiz.css";
 
-const SelectQuiz = () => {
+const SelectQuiz = (props) => {
   return (
     <div className="outer">
-      <div className="add">
-        <Link to="/quiz/create">Add a Question</Link>
-      </div>
+      {props.user === "admin" ? (
+        <div className="add">
+          <Link to="/quiz/create">Add a Question</Link>
+          <Link to="/quiz/score">See Score</Link>
+        </div>
+      ) : null}
+
       <h1>Select the Subject</h1>
       <div className="sub-buttons">
         <Link to="/gk">

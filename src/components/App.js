@@ -5,6 +5,8 @@ import Quiz from "./QuizPage";
 import CreateQues from "./CreateQues";
 import Login from "./Login";
 import history from "../history";
+import Scores from "./Score";
+
 const App = () => {
   const [user, setUser] = useState("");
   const [sign, setSign] = useState(false);
@@ -39,6 +41,7 @@ const App = () => {
             render={(props) => <Quiz {...props} user={user} />}
           />
           <Route path="/quiz/create" exact component={CreateQues} />
+          <Route path="/quiz/score" exact component={Scores} />
         </Switch>
       </Router>
     </div>
