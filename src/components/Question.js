@@ -1,12 +1,13 @@
 import React from "react";
+import "../Style/Questions.css";
 
 const Question = ({ num, setNum, wrong, setWrong, ans, setAns, questions }) => {
   const check = (e, opt) => {
     if (questions[num].answer === opt) {
       setAns(ans + 1);
-      e.target.setAttribute("style", "color: green;");
+      e.target.setAttribute("style", "background: green;");
     } else {
-      e.target.setAttribute("style", "color: red;");
+      e.target.setAttribute("style", "background: red;");
       setWrong(wrong + 1);
     }
     setTimeout(() => {
@@ -14,14 +15,13 @@ const Question = ({ num, setNum, wrong, setWrong, ans, setAns, questions }) => {
     }, 500);
   };
   return (
-    <div>
-      {console.log(questions[num])}
+    <div className="question">
       {questions[num] ? (
-        <div>
+        <div className="question-inside">
           <p>
             Q{questions[num].id}.{questions[num].ques}
           </p>
-          <ul>
+          <ul className="option">
             {questions[num].option.map((opt) => (
               <li key={opt} onClick={(e) => check(e, opt)}>
                 {opt}
