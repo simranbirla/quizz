@@ -1,0 +1,43 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.login input {
+  padding: 10px;
+}
+
+.login button {
+  padding: 10px 30px;
+  background-color: #2884a2;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.login input {
+  border: none;
+}
+
+.login input:focus {
+  outline: 2px solid #7bb2e6;
+  font-weight: bold;
+}
+
+@media (max-width: 520px) {
+  .login img {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .login form {
+    width: 80%;
+    margin: auto;
+  }
+}
