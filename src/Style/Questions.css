@@ -73,7 +73,7 @@
   padding: 10px;
   border: 2px solid gray;
   margin: 10px;
-  width: 250px;
+  width: 300px;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
@@ -90,5 +90,14 @@
 
   .question-inside ul {
     justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .quizPage h3 {
+    right: 130px;
+    position: absolute;
+    top: 150px;
+    left: 20px;
   }
 }
