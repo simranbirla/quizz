@@ -1,15 +1,21 @@
+.create-container {
+  text-align: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  justify-content: center;
 }
 
 form p {
   font-size: 1.56em;
+  text-align: center;
 }
 
 select {
-  margin: 20px 0;
+  margin: 20px auto;
   padding: 10px 30px;
   font-size: 1.52em;
   cursor: pointer;
@@ -44,11 +50,22 @@ select {
   box-shadow: 2px 2px 3px #3c5088;
 }
 
-@media (min-height: 750px) {
+@media (min-width: 750px) {
   .input {
     width: 700px;
   }
   select {
     width: 700px;
+  }
+}
+
+@media (max-width: 400px) {
+  .input {
+    width: 90%;
+    margin: auto;
+  }
+
+  select {
+    width: 90%;
   }
 }

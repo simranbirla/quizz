@@ -62,3 +62,25 @@
   padding: 5px;
   cursor: pointer;
 }
+
+.add {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
+  gap: 20px;
+}
+
+.add a {
+  border: 2px solid #2884a2;
+  padding: 1em;
+  text-decoration: none;
+  background-color: lightblue;
+  transition: all 0.12s ease-in;
+}
+
+.add a:hover {
+  background-color: #6ce1d9;
+  color: #2884a2;
+  font-size: 18px;
+}
