@@ -1,0 +1,337 @@
+{
+  "os": [
+    {
+      "id": 1,
+      "ques": " Which of the following requires a device driver?",
+      "option": ["Disk", "Register", "Cache", "Disk"],
+      "answer": "Disk"
+    },
+    {
+      "id": 2,
+      "ques": " What is the swap space in the disk used for?",
+      "option": [
+        "Saving temporary html pages",
+        "Saving process data",
+        "Storing the super-block",
+        "Storing device drivers"
+      ],
+      "answer": "Saving process data"
+    },
+    {
+      "id": 3,
+      "ques": "Increasing the RAM of a computer typically improves performance because:",
+      "option": [
+        "Virtual memory increases",
+        "Larger RAMs are faster",
+        "Fewer page faults occur",
+        "Fewer segmentation faults occur"
+      ],
+      "answer": "Fewer page faults occur"
+    },
+    {
+      "ques": "The part of machine level instruction, which tells the central processor what has to be done, is",
+      "answer": "Operation Code",
+      "option": ["Intructions", "Operation Code", "Address", "Locator"],
+      "id": 4
+    },
+    {
+      "id": 5,
+      "ques": "To avoid the race condition, the number of processes that may be simultaneously inside their critical section is",
+      "answer": "1",
+      "option": ["8", "0", "5", "1"]
+    },
+    {
+      "id": 6,
+      "ques": "A system program that combines the separately compiled modules of a program into a form suitable for execution",
+      "answer": "linker loader",
+      "option": ["assembler", "load and go", "linker loader", "compiler"]
+    },
+    {
+      "id": 7,
+      "ques": "The strategy of allowing processes that are logically runnable to be temporarily suspended is called",
+      "answer": "preemptive scheduling",
+      "option": [
+        "preemptive scheduling",
+        "non preemptive scheduling",
+        "shortest job first",
+        "first come first served"
+      ]
+    }
+  ],
+  "cn": [
+    {
+      "id": 1,
+      "ques": "The common name for a modulator-demodulator is",
+      "answer": "Modem",
+      "option": ["Modem", "Networker", "Modulator", "Transmitter"]
+    },
+    {
+      "ques": "Which of the following device is used to connect two systems, especially if the systems use different protocols?",
+      "answer": "Gateway",
+      "option": ["Server", "Gateway", "Bridge", "Hub"],
+      "id": 2
+    },
+    {
+      "id": 3,
+      "ques": "Which of the following communications modes support two-way traffic but in only one direction of a time?",
+      "answer": "Half Duplex",
+      "option": [
+        "Simplex",
+        "Half-duplex",
+        "Three-quarters duplex",
+        "Full duplex"
+      ]
+    },
+    {
+      "id": 4,
+      "ques": "A modem is connected to",
+      "option": ["A telephone line", "A keyboard", "A printer", "A monitor"],
+      "answer": "A telephone line"
+    },
+    {
+      "id": 5,
+      "ques": "The collection of links throughout the Internet creates an interconnected network called the",
+      "answer": "All of the above",
+      "option": ["WWW", "Web", "Wide Area Web", "All of the above"]
+    },
+    {
+      "id": 6,
+      "ques": "P2P is a _____ application architecture.",
+      "answer": "Distributed",
+      "option": ["Client/Server", "Distributed", "Centralized", "1-tier"]
+    },
+    {
+      "id": 7,
+      "ques": "Which of the following types of channels moves data relatively slowly?",
+      "answer": "NarrowBand",
+      "option": ["BroadBand", "Wireless Band", "NarrowBand", "VoiceBand"]
+    },
+    {
+      "id": 8,
+      "ques": "To connect networks of similar protocols ______ are used.",
+      "answer": "Bridge",
+      "option": ["Modem", "Router", "Gateway", "Bridge"]
+    },
+    {
+      "id": 9,
+      "ques": "Telnet is a ______ based computer protocol.",
+      "answer": "Text",
+      "option": ["Animation", "Text", "Image", "Sound"]
+    },
+    {
+      "id": 10,
+      "ques": "A collection of computers and devices connected together via communication devices and transmission media is called a",
+      "answer": "Network",
+      "option": ["server", "mainframe", "Workgroup", "Network"]
+    }
+  ],
+  "gk": [
+    {
+      "id": 1,
+      "ques": "........... is the first woman to head a public sector bank.",
+      "answer": "Arundhati Bhattacharya",
+      "option": [
+        "Arundhati Bhattacharya",
+        "Shikha Sharma",
+        "Chanda Kochar",
+        "Usha Ananthasubramanyan"
+      ]
+    },
+    {
+      "id": 2,
+      "ques": " World Tourism Day is celebrated on-",
+      "answer": "September 27",
+      "option": ["September 12", "September 25", "September 27", "September 29"]
+    },
+    {
+      "id": 3,
+      "ques": "Where is Bose Institute ?",
+      "answer": "Kolkata",
+      "option": ["Dispur", "Kolkata", "Mumbai", "New Delhi"]
+    },
+    {
+      "id": 4,
+      "ques": "When is the International Yoga Day celebrated ?",
+      "answer": "June 21",
+      "option": ["June 21", "March 21", "April 22", "May 31"]
+    },
+    {
+      "id": 5,
+      "ques": "The two-day festival 'North East Calling', is organized by which ministry ?",
+      "answer": "Ministry of Development of North Eastern Region (DoNER)",
+      "option": [
+        "Ministry of Development of North Eastern Region (DoNER)",
+        "Ministry of External Affairs",
+        "Ministry of Home Affairs",
+        "Ministry of Defence"
+      ]
+    },
+    {
+      "id": 6,
+      "ques": " 'Line of Blood' is a book written by whom?",
+      "answer": "",
+      "option": [
+        "Bairaj Khanna",
+        "Ursula Vernon",
+        "Amal EI-Mohtar",
+        "Diksha Basu"
+      ]
+    },
+    {
+      "id": 7,
+      "ques": "The motif of 'Hampi with Chariot' is printed on the reverse of which currency note ?",
+      "answer": "",
+      "option": [
+        "One Rupee Note",
+        "Rs. 500 note",
+        "Rs. 50 note",
+        "Rs. 1000 note"
+      ]
+    },
+    {
+      "id": 8,
+      "ques": " Who among the following Scientists got two Nobel prizes of which one was in Peace?",
+      "answer": "Linus Pauling",
+      "option": [
+        "Albert Einstein",
+        "H. G. Khorana",
+        "Linus Pauling",
+        "Paul Berg"
+      ]
+    },
+    {
+      "id": 9,
+      "ques": "The first Indian State to go wholley organic is -",
+      "answer": "Sikkim",
+      "option": ["Meghalaya", "Sikkim", "Manipur", "Kerala"]
+    },
+    {
+      "id": 10,
+      "ques": "Which among the following cities in India, is not located in Golden Quadrilateral Road Network?",
+      "answer": "Chandigarh",
+      "option": ["Kolkata", "Mumbai", "New Delhi", "Chandigarh"]
+    }
+  ],
+  "js": [
+    {
+      "id": 1,
+      "ques": "Which is not an javascript framework/lib",
+      "answer": "Django",
+      "option": ["React", "Angular", "Django", "Vue"]
+    },
+    {
+      "id": 2,
+      "ques": "What is DOM",
+      "answer": "Document Object Model",
+      "option": [
+        "Document object modification",
+        "Data Object Module",
+        "Data Object Modification",
+        "Document Object Model"
+      ]
+    },
+    {
+      "id": 3,
+      "ques": "Javascript is a ___________ language",
+      "answer": "Scripting",
+      "option": ["Programming", "Application", "Scripting", "None"]
+    },
+    {
+      "id": 4,
+      "ques": "Which of the following cannot be used for array modifications",
+      "answer": "None",
+      "option": ["map", "reduce", "filter", "None"]
+    },
+    {
+      "id": 5,
+      "ques": "Javascript can be written inside which tags",
+      "answer": "script",
+      "option": ["head", "script", "body", "meta"]
+    },
+    {
+      "id": 6,
+      "ques": "Comparison can be done using what in javascript",
+      "answer": "Both 1 and 2",
+      "option": ["==", "===", "Both 1 and 2", "none"]
+    },
+    {
+      "id": 7,
+      "ques": "What is not used for specifying variables in JS?",
+      "answer": "int",
+      "option": ["var", "int", "let", "const"]
+    },
+    {
+      "id": 8,
+      "ques": "What is the type of Nan?",
+      "answer": "number",
+      "option": ["undefined", "object", "null", "number"]
+    },
+    {
+      "id": 9,
+      "ques": "Which of these are not conditional statements?",
+      "answer": "case",
+      "option": ["if", "if..else", "if..else if .. else", "case"]
+    },
+    {
+      "id": 10,
+      "ques": "What is 4+'4'- 4? ",
+      "answer": "40",
+      "option": ["40", "444", "4", "04"]
+    }
+  ],
+  "sql": [
+    {
+      "id": 1,
+      "ques": "Which is of the following is not a database?",
+      "answer": "MySQL",
+      "option": ["Oracle", "MYSQL", "Redis", "IBM DB2"]
+    },
+    {
+      "id": 2,
+      "ques": "What is DDL",
+      "answer": "Data definition language",
+      "option": [
+        "Data definitive language",
+        "Double data language",
+        "Database definition language",
+        "Data definition language"
+      ]
+    },
+    {
+      "id": 3,
+      "ques": "Which of the commands are not used in sql?",
+      "answer": "READ",
+      "option": ["UPDATE", "CREATE", "TRUNCATE", "READ"]
+    },
+    {
+      "id": 4,
+      "ques": "Which clause to use for adding a condition?",
+      "answer": "WHERE",
+      "option": ["LIKE", "AS", "WHERE", "BETWEEN"]
+    },
+    {
+      "id": 5,
+      "ques": "Which commands undo all the transactions committed?",
+      "answer": "ROLLBACK",
+      "option": ["COMMIT", "UNDO", "TRUNCATE", "ROLLBACK"]
+    },
+    {
+      "id": 6,
+      "ques": "How to display the whole table?",
+      "answer": "SELECT *",
+      "option": ["DISPLAY ALL", "SELECT ALL", "SELECT *", "DISPLAY *"]
+    },
+    {
+      "id": 7,
+      "ques": "Which of these are not a type of join?",
+      "answer": "EQUI JOIN",
+      "option": ["EQUI JOIN", "LEFT JOIN", "OUTER JOIN", "INNER JOIN"]
+    },
+    {
+      "id": 8,
+      "ques": "NULL IS ",
+      "answer": "not a value",
+      "option": ["integer 0", "blank value", "value which is 0", "not a value"]
+    }
+  ]
+}
